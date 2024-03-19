@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webkelas.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="image/Kementerian Agama.png">
+    <title> XI.C TECHNIC</title>
+</head>
+
+<body>
+    <header>
+        <div class="box-header">
+            <div class="tag">
+                <h2>XI.C TECHNIC</h2>
+            </div>
+
+            <div class="hamburger-close">
+                <button class="refresh" onclick="refreshPage()">
+                    <i class="fa-solid fa-rotate-right" id="refResh"></i>
+                </button>
+
+                <button class="hamburger" onclick="toggleNav()">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="box-nav">
+                <a href="#" id="media">media <i class="fa-solid fa-user"></i></a>
+                <a href="#foto">foto <i class="fa-regular fa-image"></i></a>
+                <a href="#jadwal">jadwal <i class="fa-solid fa-calendar-days"></i></a>
+                <a href="#pengurus">pengurus <i class="fa-solid fa-folder-tree"></i></a>
+            </ul>
+        </nav>
+    </header>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="gelombang-atas" data-aos="fade-down">
+        <path fill="#0099ff" fill-opacity="1"
+            d="M0,96L40,117.3C80,139,160,181,240,218.7C320,256,400,288,480,298.7C560,309,640,299,720,256C800,213,880,139,960,117.3C1040,96,1120,128,1200,128C1280,128,1360,96,1400,80L1440,64L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+        </path>
+    </svg>
+
+    <section class="home">
+        <div class="isiHome" data-aos="fade-up">
+            <div class="judulhome">
+                <h2>Media <i class="fa-solid fa-user"></i></h2>
+            </div>
+
+            <div class="boxmedia" data-aos="fade-right">
+
+                <button class="btmedia" id="Ig">
+                    <a href="https://instagram.com/sbelas.technic?igshid=NGVhN2U2NjQ0Yg==" target="_blank">
+                        <i class="fa-brands fa-instagram"> <span>Instagram</span></i>
+                    </a>
+                </button>
+
+                <button class="btmedia" id="Maps">
+                    <a href="https://www.google.com/maps/place/MAN+11+Jakarta+Selatan/@-6.3191311,106.7756731,14z/data=!4m21!1m14!4m13!1m4!2m2!1d106.8060391!2d-6.330386!4e1!1m6!1m2!1s0x2e69ee243c1355a9:0x4682775060c480a8!2sMAN+11+Jakarta+Selatan,+Jl.+H.+Gandun+No.60,+RT.7/RW.8,+Lb.+Bulus,+Kec.+Cilandak,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12440!2m2!1d106.786506!2d-6.3061086!3e0!3m5!1s0x2e69ee243c1355a9:0x4682775060c480a8!8m2!3d-6.3060835!4d106.7864346!16s/g/11gfdqs7g2"
+                        target="_blank">
+                        <i class="fa fa-location-arrow"> <span>Maps</span></i>
+                    </a>
+                </button>
+
+                <button class="btmedia" id="Tt">
+                    <a href="">
+                        <i class="fa-brands fa-tiktok"> <span>Tiktok</span></i>
+                    </a>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="foto">
+        <div class="isifoto" data-aos="fade-up" id="foto">
+            <div class="judulfoto" data-aos="fade-up">
+                <h2>Foto <i class="fa-regular fa-image"></i> </h2>
+            </div>
+
+            <div class="box-dot" data-aos="fade-right" style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+            <div class="box-foto" data-aos="fade-up">
+                <div class="mySlides fade">
+                    <img src="image/foto 1.jpg" alt="foto1">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image/foto 2.jpg" alt="foto2">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image/foto 3.jpg" alt="foto3">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image/foto 4.jpg" alt="foto4">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image/foto 6.jpg" alt="foto5">
+                </div>
+
+
+                <div class="box-np">
+                    <div class="isinp" data-aos="fade-right">
+                        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left"></i></a>
+                        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="jadwal-pelajaran">
+        <div class="isipelajaran" id="jadwal" data-aos="fade-up">
+            <div class="judul-jadwal" data-aos="fade-right">
+                <h2>Jadwal</h2>
+            </div>
+
+            <details class="details-pelajaran">
+                <summary class="summary-pelajaran" data-aos="fade-up">
+                    Jadwal Pelajaran <i class="fa-solid fa-book"></i>
+                </summary>
+
+                <div class="box-pelajaran">
+                    <div class="hari" data-aos="fade-up">Senin</div>
+                    <div class="jam" data-aos="fade-right">- Fisika</div>
+                    <div class="jam" data-aos="fade-right">- Matwa</div>
+                    <div class="jam" data-aos="fade-right">- B.ArabMinat</div>
+                    <div class="jam" data-aos="fade-right">- B.ArabWajib</div>
+                    <div class="jam" data-aos="fade-right">- Sejarah</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Selasa</div>
+                    <div class="jam" data-aos="fade-right">- Matmin</div>
+                    <div class="jam" data-aos="fade-right">- SBK</div>
+                    <div class="jam" data-aos="fade-right">- B.Indonesia</div>
+                    <div class="jam" data-aos="fade-right">- PJOK</div>
+                    <div class="jam" data-aos="fade-right">- Fisika</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Rabu</div>
+                    <div class="jam" data-aos="fade-right">- Geografi</div>
+                    <div class="jam" data-aos="fade-right">- Informatika</div>
+                    <div class="jam" data-aos="fade-right">- Akidah Akhlak</div>
+                    <div class="jam" data-aos="fade-right">- Tahfiz</div>
+                    <div class="jam" data-aos="fade-right">- SKI</div>
+                    <div class="jam" data-aos="fade-right">- PKWU</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Kamis</div>
+                    <div class="jam" data-aos="fade-right">- Fiqih</div>
+                    <div class="jam" data-aos="fade-right">- Geografi</div>
+                    <div class="jam" data-aos="fade-right">- Informatika</div>
+                    <div class="jam" data-aos="fade-right">- B.Inggris</div>
+                    <div class="jam" data-aos="fade-right">- Matmin</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Jumat</div>
+                    <div class="jam" data-aos="fade-right">- Projek</div>
+                    <div class="jam" data-aos="fade-right">- BK</div>
+                    <div class="jam" data-aos="fade-right">- Geografi</div>
+                    <div class="jam" data-aos="fade-right">- Informatika</div>
+                    <div class="jam" data-aos="fade-right">- Qurdis</div>
+                    <div class="jam" data-aos="fade-right">- PPKN</div>
+                    <br>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="jadwal-piket">
+        <div class="isipiket" data-aos="fade-up">
+            <details class="details-piket">
+                <summary class="summary-piket" data-aos="fade-up">
+                    Jadwal Piket <i class="fa-solid fa-broom"></i>
+                </summary>
+
+                <div class="box-piket">
+                    <div class="hari" data-aos="fade-up">Senin</div>
+                    <div class="nama" data-aos="fade-right">- Santoso</div>
+                    <div class="nama" data-aos="fade-right">- Adhit</div>
+                    <div class="nama" data-aos="fade-right">- Aryo</div>
+                    <div class="nama" data-aos="fade-right">- Davina(PJ)</div>
+                    <div class="nama" data-aos="fade-right">- Thania</div>
+                    <div class="nama" data-aos="fade-right">- Egi</div>
+                    <div class="nama" data-aos="fade-right">- Ucup</div>
+                    <div class="nama" data-aos="fade-right">- Faiq</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Selasa</div>
+                    <div class="nama" data-aos="fade-right">- Zalfa</div>
+                    <div class="nama" data-aos="fade-right">- Aca</div>
+                    <div class="nama" data-aos="fade-right">- Aurel</div>
+                    <div class="nama" data-aos="fade-right">- Aby</div>
+                    <div class="nama" data-aos="fade-right">- Pipeh</div>
+                    <div class="nama" data-aos="fade-right">- Rafi</div>
+                    <div class="nama" data-aos="fade-right">- Alya</div>
+                    <div class="nama" data-aos="fade-right">- Arvel</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Rabu</div>
+                    <div class="nama" data-aos="fade-right">- Qafka</div>
+                    <div class="nama" data-aos="fade-right">- Mamet</div>
+                    <div class="nama" data-aos="fade-right">- Dirza</div>
+                    <div class="nama" data-aos="fade-right">- Fatur</div>
+                    <div class="nama" data-aos="fade-right">- Okan(PJ)</div>
+                    <div class="nama" data-aos="fade-right">- Farrel</div>
+                    <div class="nama" data-aos="fade-right">- Khaira</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Kamis</div>
+                    <div class="nama" data-aos="fade-right">- Najwal</div>
+                    <div class="nama" data-aos="fade-right">- Davi</div>
+                    <div class="nama" data-aos="fade-right">- Naomi</div>
+                    <div class="nama" data-aos="fade-right">- Sarah</div>
+                    <div class="nama" data-aos="fade-right">- Nabila</div>
+                    <div class="nama" data-aos="fade-right">- Hamka</div>
+                    <div class="nama" data-aos="fade-right">- Zea</div>
+                    <br>
+
+                    <div class="hari" data-aos="fade-up">Jumat</div>
+                    <div class="nama" data-aos="fade-right">- Khani(PJ)</div>
+                    <div class="nama" data-aos="fade-right">- Kokoh</div>
+                    <div class="nama" data-aos="fade-right">- Pio</div>
+                    <div class="nama" data-aos="fade-right">- Adam</div>
+                    <div class="nama" data-aos="fade-right">- Jaki</div>
+                    <div class="nama" data-aos="fade-right">- Dinda</div>
+                    <div class="nama" data-aos="fade-right">- Rafa</div>
+                    <br>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="pengurus-kelas">
+        <div class="isipengurus" id="pengurus" data-aos="fade-up">
+            <div class="judulpengurus" data-aos="fade-right">
+                <h2>pengurus</h2>
+            </div>
+
+            <div class="box-pengurus">
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(1)">
+                    <div class="posisi">
+                        <h3>wali kelas : </h3>
+                        <span>bu renny</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data1">
+                        <p>ini adalah wali kelas kami bu novitareny</p>
+                    </div>
+                </div>
+
+                <div class="line" data-aos="fade-up">
+                    <div class="garis"></div>
+                </div>
+
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(2)">
+                    <div class="posisi">
+                        <h3>ketua kelas : </h3>
+                        <span>mdzakwan</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data2">
+                        <p>ini adalah ketua kelas kami mdzakwan atau kokoh</p>
+                    </div>
+                </div>
+
+                <div class="line" data-aos="fade-up">
+                    <div class="garis"></div>
+                </div>
+
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(3)">
+                    <div class="posisi">
+                        <h3>wakil ketua kelas : </h3>
+                        <span>zea</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data3">
+                        <p>ini adalah wakil ketua kelas kami zea</p>
+                    </div>
+                </div>
+
+                <div class="line" data-aos="fade-up">
+                    <div class="garis"></div>
+                </div>
+
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(4)">
+                    <div class="posisi">
+                        <h3>sekertaris 1 : </h3>
+                        <span>aurel</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data4">
+                        <p>ini adalah sekertaris kami aurel</p>
+                    </div>
+                </div>
+
+                <div class="line" data-aos="fade-up">
+                    <div class="garis"></div>
+                </div>
+
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(5)">
+                    <div class="posisi">
+                        <h3>sekertaris 2: </h3>
+                        <span>davina</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data5">
+                        <p>ini adalah sekertaris 2 kami davina</p>
+                    </div>
+                </div>
+
+                <div class="line" data-aos="fade-up">
+                    <div class="garis"></div>
+                </div>
+
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(6)">
+                    <div class="posisi">
+                        <h3>bendahara 1 : </h3>
+                        <span>aca</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data6">
+                        <p>ini adalah bendahara 1 kami aca</p>
+                    </div>
+                </div>
+
+                <div class="line" data-aos="fade-up">
+                    <div class="garis"></div>
+                </div>
+
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(7)">
+                    <div class="posisi">
+                        <h3>bendahara 2 : </h3>
+                        <span>pio</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data7">
+                        <p>ini adalah bendahara 2 kami pio</p>
+                    </div>
+                </div>
+
+                <div class="line" data-aos="fade-up">
+                    <div class="garis"></div>
+                </div>
+
+                <div class="pengurus" data-aos="fade-right" onclick="toggleData(8)">
+                    <div class="posisi">
+                        <h3>kebersihan : </h3>
+                        <span>dinda</span>
+                    </div>
+                    <div class="data-identitas data-hidden" id="data8">
+                        <p>ini adalah kebersihan kami dinda</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    
+    <footer class="penutup">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,160L40,170.7C80,181,160,203,240,197.3C320,192,400,160,480,144C560,128,640,128,720,160C800,192,880,256,960,245.3C1040,235,1120,149,1200,122.7C1280,96,1360,128,1400,144L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+
+        </path></svg>
+        <div class="isipenutup">
+            <div class="judul-penutup">
+                <h2>
+                    anak bu renny
+                </h2>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- untuk animasi fade data AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+
+    <!-- untuk button refresh -->
+    <script>
+        function refreshPage() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(function () {
+                location.reload(true);
+            }, 500);
+        }
+    </script>
+
+    <!-- untuk ketika direfresh dari browser -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        })
+    </script>
+
+    <!-- untuk membuka identitas pengurus -->
+    <script>
+        function toggleData(id) {
+            var dataBox = document.getElementById('data' + id);
+            dataBox.classList.toggle('data-hidden')
+        }
+    </script>
+
+    <!-- ini adalah untuk membuka nav -->
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show');
+        }
+    </script>
+
+    <!-- untuk pergantian foto -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

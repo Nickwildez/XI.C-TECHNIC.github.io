@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    top: 0;
+    padding: 0;
+    left: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    text-decoration: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+body.loaded{
+    opacity: 1;
+}
+
+header {
+    background-color: rgba(48, 48, 48, 0.801);
+    display: flex;
+    backdrop-filter: blur(20px);
+    flex-wrap: wrap;
+    text-align: center;
+    position: fixed;
+    border-radius: 0 0 20px 20px;
+    padding: 15px;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 9999;
+    border: none;
+}
+
+.box-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hamburger-close {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.hamburger-close .hamburger {
+    font-size: 1.3rem;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    border: none;
+    transition: 0.6s ease-in-out;
+}
+
+.hamburger-close .hamburger:hover {
+    color: aqua;
+}
+
+.hamburger-close .refresh {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+    transition: 0.6s ease;
+}
+
+.hamburger-close .refresh:hover {
+    color: aqua;
+    animation: putar 2s infinite;
+}
+
+@keyframes putar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(100deg);
+    }
+
+    1000% {
+        transform: rotate(150deg);
+    }
+}
+
+nav {
+    display: none;
+    background-color: rgba(48, 48, 48, 0.89);
+    top: 60px;
+    left: 0;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    z-index: 2;
+    opacity: 0;
+}
+
+nav.show {
+    display: grid;
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+nav .box-nav {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+    width: 100%;
+}
+
+.box-nav a {
+    background-color: rgba(48, 48, 48, 0.49);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.box-nav a:hover {
+    background-color: rgb(0, 153, 255);
+}
+
+.gelombang-atas {
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+
+.home {
+    display: grid;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border: none;
+    position: relative;
+    min-height: 80vh;
+    text-align: center;
+    width: 100%;
+}
+
+.home .isiHome {
+    text-align: center;
+    box-shadow: 0 0 8px 0 black;
+    border-radius: 10px;
+    display: grid;
+    background-color: transparent;
+    max-height: 70vh;
+    position: relative;
+    color: black;
+    padding: 20px;
+    border: none;
+    width: 100%;
+}
+
+.judulhome h2 {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+    outline: none;
+    padding: 35px;
+    border-radius: 10px 10px 35% 35%;
+    background-color: rgb(0, 153, 255);
+}
+
+.isiHome .boxmedia {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.btmedia {
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.6s ease-in-out;
+}
+
+.btmedia a {
+    width: 100%;
+}
+
+.btmedia i {
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.6s ease-in-out;
+}
+
+#Ig:hover {
+    transform: translateY(-5px);
+    background-color: rgb(255, 0, 200);
+    box-shadow: o o 4px 1px rgb(255, 0, 200);
+}
+
+#Ig:hover i {
+    color: white;
+}
+
+#Maps:hover {
+    transform: translateY(-5px);
+    background-color: rgb(0, 255, 0);
+    box-shadow: o o 4px 1px rgb(0, 255, 0);
+}
+
+#Maps:hover i {
+    color: white;
+}
+
+#Tt:hover {
+    transform: translateY(-5px);
+    background-color: rgb(0, 0, 0);
+    box-shadow: o o 4px 1px rgb(0, 0, 0);
+}
+
+#Tt:hover i {
+    color: white;
+}
+
+.foto {
+    display: grid;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    position: relative;
+    min-height: 70vh;
+    text-align: center;
+    margin-bottom: 4pc;
+    width: 100%;
+}
+
+.isifoto {
+    box-shadow: 0 0 8px 0 black;
+    width: 100%;
+    display: grid;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.judulfoto h2{
+    color: rgb(255, 255, 255);
+    border-radius: 10px 10px 35% 35%;
+    background-color: rgb(0, 153, 255);
+    border: none;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 25px;
+}
+
+.box-foto {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    box-shadow: 0 0 8px 0 black;
+    margin-bottom: 10px;
+    padding: 2px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.box-np {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    background-color: transparent;
+}
+
+.isinp {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    background-color: transparent;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.prev,
+.next {
+    background-color: rgb(219, 219, 219);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    border: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.6s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: black;
+    color: white;
+}
+
+.box-dot {
+    background-color: transparent;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #000000;
+    border: 2px solid white;
+}
+
+
+.fade {
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.jadwal-pelajaran {
+    display: grid;
+    color: black;
+    text-align: center;
+    width: 100%;
+    background-position: center;
+    border: none;
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-size: cover;
+}
+
+.isipelajaran {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 8px 0 black;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.judul-jadwal h2{
+    background: rgb(0, 153, 255);
+    border: none;
+    font-size: 2rem;
+    border-radius: 10px 10px 35% 35%;
+    color: white;
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+.details-pelajaran {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    max-height: 10vh;
+    overflow: hidden;
+    border-bottom: 3px solid black;
+    transition: max-height 1s ease-out;
+}
+
+.details-pelajaran[open] {
+    max-height: 160vh;
+    transition: max-height 1s ease-in;
+}
+
+.summary-pelajaran {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: rgb(219, 219, 219);
+    border-radius: 15px;
+    transition: 0.6s ease-in-out;
+}
+
+.summary-pelajaran:hover {
+    background-color: black;
+    color: white;
+}
+
+.box-pelajaran {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.box-pelajaran .hari {
+    border-bottom: 3px solid black;
+}
+
+.jadwal-piket {
+    display: grid;
+    color: black;
+    text-align: center;
+    width: 100%;
+    background-position: center;
+    border: none;
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-size: cover;
+    margin-bottom: 70px;
+}
+
+.isipiket {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 8px 0 black;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    min-height: 20vh;
+}
+
+.details-piket {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    max-height: 10vh;
+    overflow: hidden;
+    border-bottom: 3px solid black;
+    transition: max-height 1s ease-out;
+}
+
+.details-piket[open] {
+    max-height: 210vh;
+    transition: max-height 1s ease-in;
+}
+
+.summary-piket {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: rgb(219, 219, 219);
+    border-radius: 15px;
+    transition: 0.6s ease-in-out;
+}
+
+.summary-piket:hover {
+    background-color: black;
+    color: white;
+}
+
+.box-piket {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.box-piket .hari {
+    border-bottom: 3px solid black;
+}
+
+.pengurus-kelas{
+    display: grid;
+    padding: 10px;
+    min-height: 150vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    margin-top: 20px;
+    color: black;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.isipengurus{
+    box-shadow: 0 0 8px 0 black;
+    display: grid;
+    width: 100%;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+ .judulpengurus h2{
+    background-color: rgb(0, 153, 255);
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    border: none;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 35% 35%;
+}
+
+.box-pengurus{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pengurus{
+    padding: 10px;
+    box-shadow: 0 0 8px 0 black;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.pengurus:hover{
+    background-color: black;
+    color: white;
+}
+
+.posisi{
+    background-color: transparent;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    border-bottom: 2px solid black;
+}
+
+.posisi:hover{
+    border-bottom: 2px solid white;
+}
+
+.line{
+   width: 100%;
+   display: grid;
+   justify-content: center;
+   border: none;
+}
+
+.garis{
+    width: 2px;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    height: 30px;
+    background-color: black;
+}
+
+.data-identitas{
+    max-height: 110px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.data-hidden{
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.penutup{
+    width: 100%;
+    display: grid;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+
+.isipenutup{
+    box-shadow: 0 0 8px 0 black;
+    position: relative;
+    width: 100%;
+    border: none;
+    border-radius: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.judul-penutup h2{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 20px;
+    border: none;
+    border-radius: 10px 10px 35% 35%;
+    background-color: rgb(0, 153, 255);
+}
